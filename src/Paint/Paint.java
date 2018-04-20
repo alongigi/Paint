@@ -9,11 +9,12 @@ import javafx.stage.Stage;
 public class Paint extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage stage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("paintfxml.fxml"));
-        Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+
+        stage.setTitle("Paint App");
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
 
